@@ -3,6 +3,8 @@ import 'package:laurax_coffee/screens/auth/select_option.dart';
 import 'package:laurax_coffee/screens/utils/colors.dart';
 import 'package:unicons/unicons.dart';
 
+import '../utils/functions.dart';
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -67,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            _navigateToNextScreen(context);
+            navigateToNextScreen(context, SelectedOption());
           },
           tooltip: 'Increment',
           backgroundColor: kFirstWhiteColor,
@@ -79,10 +81,5 @@ class WelcomeScreen extends StatelessWidget {
             color: kTextColor,
           ),
         ));
-  }
-
-  void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => SelectedOption()));
   }
 }

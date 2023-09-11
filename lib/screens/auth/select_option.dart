@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:laurax_coffee/screens/utils/colors.dart';
 
+import '../utils/functions.dart';
+import 'login.dart';
+
 class SelectedOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,9 @@ class SelectedOption extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: null,
+                onPressed: () {
+                  navigateToNextScreen(context, Login());
+                },
                 child: const Text(
                   'Login',
                   style: TextStyle(
